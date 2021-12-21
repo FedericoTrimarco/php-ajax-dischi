@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    background-color: #182d3d;
+}
+header{
+    height: 60px;
+    background-color: #132431;
+}
