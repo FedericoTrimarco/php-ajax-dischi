@@ -1,6 +1,5 @@
 <?php
     require_once __DIR__ . '/data.php';
-    // var_dump(__DIR__);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +12,30 @@
 </head>
 <body>
     <header>
-        
+        <img src="../img/logo.png" alt="spotify-logo">
     </header>
     <main>
-
+        <ul>
+            <?php
+                foreach($database as $data){
+                    ?>
+                        <li>
+                            <div class="card">
+                                <div class="img-album">
+                                    <img src="<?php echo $data['poster']?>" alt="<?php echo $data['title']?>-Poster">
+                                </div>
+                                <div class="album-info">
+                                    <h2><?php echo $data['title']?></h2>
+                                    <span><?php echo $data['author']?></span>
+                                    <h3><?php echo $data['year']?></h3>
+                                    <span><?php echo $data['genre']?></span>
+                                </div>
+                            </div>
+                        </li>
+                    <?php
+                }
+            ?>
+        </ul>
     </main>
 </body>
 </html>
