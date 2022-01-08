@@ -17,23 +17,23 @@
     <main>
         <ul>
             <?php
-                foreach($database as $data){
-                    ?>
-                        <li>
-                            <div class="card">
-                                <div class="img-album">
-                                    <img src="<?php echo $data['poster']?>" alt="<?php echo $data['title']?>-Poster">
-                                </div>
-                                <div class="album-info">
-                                    <h2><?php echo $data['title']?></h2>
-                                    <span><?php echo $data['author']?></span>
-                                    <h3><?php echo $data['year']?></h3>
-                                    <span><?php echo $data['genre']?></span>
-                                </div>
-                            </div>
-                        </li>
-                    <?php
-                }
+                foreach($database as $data): 
+            ?>
+                <li>
+                    <div class="card">
+                        <div class="img-album">
+                            <img src="<?php echo $data['poster']?>" alt="<?php echo $data['title']?>-Poster">
+                        </div>
+                        <div class="album-info">
+                            <h2><?php echo $data['title']?></h2>
+                            <span><?php echo $data['author']?></span>
+                            <h3><?php echo $data['year']?></h3>
+                            <span><?php echo $data['genre']?></span>
+                        </div>
+                    </div>
+                </li>
+            <?php
+                endforeach;
             ?>
         </ul>
     </main>

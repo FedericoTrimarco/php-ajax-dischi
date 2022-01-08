@@ -2,7 +2,7 @@ const app = new Vue({
     el: '#app',
     data: {
         albums: null,
-        apiUrl: 'http://localhost/php-ajax-dischi/ajax/database.php',
+        apiUrl: 'http://localhost/PHP-boolean/php-ajax-dischi/ajax/database.php',
     },
     created() {
         this.getAlbums();
